@@ -1,0 +1,168 @@
+
+:root{
+  --navy:#26365f;
+  --navy-dark:#1c2747;
+  --red:#d73a33;
+  --bg:#eaf0f4;
+  --panel:#ffffff;
+  --text:#202a4a;
+  --muted:#65718a;
+  --soft:#f4f6f8;
+  --shadow:0 18px 40px rgba(25,35,65,.14);
+}
+*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body{background:var(--bg);color:var(--text);min-height:100vh}
+a{text-decoration:none;color:inherit}
+button,input{font:inherit}
+
+/* Floating small blue helper square seen on pages */
+.float-mark{
+  position:fixed;left:14px;top:185px;z-index:50;width:52px;height:52px;border-radius:12px;
+  background:linear-gradient(135deg,#69b4ff,#2b5eaa);box-shadow:0 4px 12px rgba(38,60,116,.25);
+}
+.float-mark:before{content:"";position:absolute;width:25px;height:9px;background:#d8ecff;border-radius:99px;left:13px;top:22px;transform:rotate(-45deg)}
+
+/* LOGIN */
+.login-body{
+  min-height:100vh;background:#141b2e;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;overflow:auto;
+}
+.login-card{width:100%;max-width:560px;border-radius:34px;overflow:hidden;border:1px solid rgba(255,255,255,.6);box-shadow:0 25px 55px rgba(0,0,0,.28)}
+.login-top{background:linear-gradient(145deg,#314274,#223054);padding:52px 40px 48px;text-align:center}
+.logo-circle{width:132px;height:132px;border-radius:50%;background:white;margin:0 auto 24px;display:grid;place-items:center;border:5px solid rgba(255,255,255,.45);box-shadow:0 12px 28px rgba(0,0,0,.22);overflow:hidden}
+.logo-circle img{width:100%;height:100%;object-fit:cover}
+.fake-logo{font-weight:900;color:#26365f;text-align:center;font-size:15px;line-height:1.1}
+.login-top h1{color:white;font-size:38px;font-weight:900;letter-spacing:-1px}
+.login-top p{display:inline-block;margin-top:12px;color:#eef3ff;background:rgba(255,255,255,.12);padding:7px 22px;border-radius:999px;font-weight:800}
+.login-form{background:#d7d9dc;padding:40px;border-radius:0 0 34px 34px}
+.login-group{margin-bottom:28px}
+.login-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.login-group label{font-weight:900;color:#1f2d4d}
+.login-row a{font-weight:900;color:var(--red)}
+.login-input-box{position:relative}
+.login-input-box svg{position:absolute;left:22px;top:50%;transform:translateY(-50%);width:24px;height:24px;stroke:#263c74;z-index:2;transition:.25s}
+.login-input{width:100%;height:76px;border-radius:18px;border:3px solid transparent;padding:0 24px 0 66px;background:white;outline:none;color:#1f2d4d;font-size:18px;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.14);transition:.25s}
+.login-input::placeholder{color:#9aa3b5}
+.login-input-box:hover .login-input,.login-input:focus{border-color:var(--red);box-shadow:0 0 0 5px rgba(215,58,51,.14),0 9px 22px rgba(215,58,51,.2)}
+.login-input-box:hover svg,.login-input:focus + svg,.login-input-box:focus-within svg{stroke:var(--red)}
+.login-btn{width:100%;height:76px;border:0;border-radius:18px;background:#31427e;color:white;font-size:22px;font-weight:900;box-shadow:0 10px 22px rgba(38,60,116,.28);cursor:pointer;transition:.25s}
+.login-btn:hover{background:var(--red);transform:translateY(-2px)}
+.copyright{margin-top:34px;background:rgba(255,255,255,.26);padding:12px 24px;border-radius:999px;color:#1f2d4d;font-weight:800;opacity:.75}
+
+/* FORGOT */
+.forgot-body{min-height:100vh;background:#e9eef2;display:flex;align-items:center;justify-content:center;padding:20px}
+.forgot-card{width:100%;max-width:560px;background:white;border-radius:18px;padding:42px;box-shadow:0 24px 40px rgba(0,0,0,.14);text-align:center}
+.forgot-icon{width:78px;height:78px;background:#e8edf2;border-radius:50%;display:grid;place-items:center;margin:0 auto 24px;transition:.3s}
+.forgot-card:hover .forgot-icon{transform:rotate(10deg)}
+.forgot-icon svg{stroke:#263c74}
+.forgot-card h1{font-size:30px;color:#0f2348;margin-bottom:12px;font-weight:900}
+.forgot-card p{color:#6b7890;font-size:16px;line-height:1.5;max-width:420px;margin:0 auto 38px}
+.form-group{text-align:left;margin-bottom:28px}
+.form-group label{display:block;font-weight:900;color:#0f2348;margin-bottom:10px}
+.input-wrapper{position:relative}
+.input-wrapper svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:24px;height:24px;stroke:#9aa4b5}
+.input-wrapper input{width:100%;height:62px;border:1px solid #d9dee7;border-radius:16px;padding:0 18px 0 54px;background:#fafbfd;outline:none;color:#0f2348;font-size:18px}
+.input-wrapper input:focus{border-color:#263c74;background:white}
+.reset-btn{width:100%;height:58px;border:0;border-radius:16px;background:#263c74;color:white;font-weight:900;cursor:pointer;transition:.25s}
+.reset-btn:hover{background:#222d4b}
+.back-link{display:inline-block;margin-top:40px;color:#0f2348;font-weight:800}
+
+/* APP LAYOUT */
+.app-body{height:100vh;padding:20px;display:flex;gap:20px;overflow:hidden;background:#eaf0f4}
+.sidebar{width:360px;background:#f7f9fb;border-radius:34px;box-shadow:var(--shadow);display:flex;flex-direction:column;overflow:hidden}
+.sidebar-top{padding:42px 40px 36px;display:flex;align-items:center;gap:22px;border-bottom:1px solid #dce3ea}
+.side-logo{width:70px;height:70px;border-radius:16px;background:white;box-shadow:0 8px 16px rgba(0,0,0,.12);display:grid;place-items:center;overflow:hidden}
+.side-logo img{width:100%;height:100%;object-fit:cover}
+.side-title h2{font-size:28px;line-height:1;font-weight:900;color:#172442}
+.side-title p{color:var(--red);font-weight:900;margin-top:6px}
+.nav{padding:34px 36px;display:flex;flex-direction:column;gap:18px;flex:1}
+.nav a{height:70px;border-radius:18px;display:flex;align-items:center;gap:24px;padding:0 22px;color:#606b82;font-size:18px;font-weight:900;transition:.25s}
+.nav a svg{width:28px;height:28px;stroke:currentColor}
+.nav a.active{background:#26365f;color:white;box-shadow:0 12px 24px rgba(38,54,95,.28)}
+.nav a:hover{background:white}
+.nav a.active:hover{background:#26365f}
+.side-user-wrap{border-top:1px solid #dce3ea;padding:30px}
+.side-user{height:92px;background:white;border:1px solid #e1e5eb;border-radius:18px;display:flex;align-items:center;gap:18px;padding:0 22px;box-shadow:0 6px 12px rgba(0,0,0,.06)}
+.avatar{width:50px;height:50px;border-radius:14px;background:linear-gradient(135deg,#373a78,#d65b49);color:white;display:grid;place-items:center;font-size:20px;font-weight:900}
+.side-user h3{font-size:18px;color:#172442}
+.side-user p{font-size:13px;color:#65718a;font-weight:700}
+.logout{margin-top:20px;width:100%;height:60px;border-radius:16px;background:#fdeaea;color:#cc332c;border:0;font-size:18px;font-weight:900;cursor:pointer}
+.main-shell{flex:1;background:#f8fafc;border-radius:34px;box-shadow:var(--shadow);overflow:hidden;position:relative}
+.page-header{height:150px;background:white;display:flex;align-items:center;justify-content:space-between;padding:0 32px 0 34px}
+.page-title h1{font-size:38px;color:#1f2d4d;font-weight:900;letter-spacing:-1px}
+.page-title p{font-size:18px;color:#263c74;font-weight:900;margin-top:6px}
+
+/* CHAT */
+.chat-main{display:flex;flex-direction:column;height:100%}
+.chat-head{height:150px;background:white;display:flex;align-items:center;justify-content:space-between;padding:0 44px}
+.bot-info{display:flex;align-items:center;gap:20px}
+.bot-logo{position:relative;width:70px;height:70px;border-radius:16px;background:white;box-shadow:0 8px 16px rgba(0,0,0,.12);display:grid;place-items:center}
+.online-dot{position:absolute;right:-4px;bottom:6px;width:16px;height:16px;background:#79d489;border:3px solid white;border-radius:50%}
+.bot-info h1{font-size:30px;color:#1f2d4d;font-weight:900}
+.bot-info p{font-size:17px;color:#4b5d86;font-weight:800}
+.refresh{width:58px;height:58px;border:0;background:white;border-radius:16px;box-shadow:0 5px 12px rgba(0,0,0,.12);display:grid;place-items:center}
+.chat-area{flex:1;background:#eef2f5;padding:50px}
+.bot-message{display:flex;align-items:center;gap:20px;margin-left:0;margin-top:0}
+.bot-mini{width:50px;height:50px;border-radius:50%;background:white;box-shadow:0 6px 12px rgba(0,0,0,.1);display:grid;place-items:center}
+.message-card{background:white;border-radius:22px;padding:22px 30px;min-width:620px;box-shadow:0 4px 10px rgba(0,0,0,.08);font-size:18px;font-weight:800;color:#1f2d4d}
+.message-card small{display:block;margin-top:14px;color:#6b7890}
+.chat-input-zone{height:160px;background:white;display:flex;align-items:center;justify-content:center}
+.chat-input{width:76%;height:84px;border:4px solid #26365f;border-radius:999px;display:flex;align-items:center;justify-content:space-between;padding:0 14px 0 32px;box-shadow:0 0 0 4px rgba(38,54,95,.12)}
+.chat-input span{color:#8c96a9;font-size:18px;font-weight:700}
+.send-btn{width:64px;height:64px;border:0;border-radius:50%;background:#eef2f5;display:grid;place-items:center;box-shadow:0 6px 12px rgba(0,0,0,.1)}
+
+/* COURSES */
+.legend{display:flex;gap:22px;background:white;border-radius:16px;padding:16px 22px;box-shadow:0 5px 14px rgba(0,0,0,.08);font-weight:900;color:#1f2d4d}
+.legend span:before{content:"";display:inline-block;width:12px;height:12px;border:3px solid currentColor;border-radius:50%;margin-right:8px;vertical-align:-1px}
+.courses-area{height:calc(100% - 150px);background:#fff;padding:28px;position:relative;background-image:radial-gradient(#e9edf2 1px, transparent 1px);background-size:12px 12px;overflow:hidden}
+.course-map{position:relative;width:900px;height:520px;margin:0 auto}
+.course-node{position:absolute;width:94px;height:26px;background:white;border:2px solid #4a7cff;border-radius:5px;font-size:6px;font-weight:900;text-align:center;color:#1f2d4d;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 8px rgba(0,0,0,.06);cursor:pointer}
+.course-node.y2{border-color:#e8529e}.course-node.y3{border-color:#7d55ff}.course-node.y4{border-color:#ef4b42}
+.zoom{position:absolute;left:24px;bottom:22px;background:white;border-radius:14px;box-shadow:0 5px 12px rgba(0,0,0,.12);overflow:hidden}
+.zoom button{display:block;width:36px;height:34px;border:0;background:white;font-size:22px;border-bottom:1px solid #e5e7eb}
+
+/* modal */
+.modal-toggle{display:none}
+.modal-overlay{display:none;position:absolute;inset:0;background:rgba(29,38,58,.55);backdrop-filter:blur(5px);z-index:20;align-items:center;justify-content:center}
+.modal-toggle:checked ~ .modal-overlay{display:flex}
+.course-modal{width:560px;max-height:82%;background:white;border:6px solid white;border-radius:28px;overflow:auto;box-shadow:0 25px 60px rgba(0,0,0,.25)}
+.modal-top{background:#26365f;color:white;padding:28px 34px;position:relative}
+.pill{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:7px 18px;font-weight:900;margin-bottom:16px}
+.close{position:absolute;right:26px;top:24px;width:44px;height:44px;background:rgba(255,255,255,.12);border-radius:50%;display:grid;place-items:center;font-size:30px;cursor:pointer}
+.modal-top h2{font-size:28px}
+.modal-content{padding:36px}
+.desc{background:#f6f7f9;border-left:4px solid #26365f;border-radius:0 14px 14px 0;padding:22px;font-size:18px;line-height:1.5;margin-bottom:28px;color:#243152}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:28px}
+.info-box{background:#f3f5f7;border-radius:18px;padding:22px}
+.info-box small{display:block;color:#6b7890;font-weight:900;margin:12px 0 6px}
+.info-box strong{font-size:24px;color:#1f2d4d}
+.section-line{border-top:1px solid #e7e9ee;padding-top:22px;margin-top:18px}
+.section-line h3{font-size:18px;margin-bottom:12px;color:#102143}
+.section-value{background:#f3f5f7;border-radius:14px;padding:16px;font-size:18px;color:#243152}
+
+/* PROFILE */
+.profile-content{height:calc(100% - 0px);padding:48px 90px;overflow:auto}
+.profile-title{margin-left:40px;margin-bottom:42px}
+.profile-title h1{font-size:40px;color:#1f2d4d;font-weight:900}
+.profile-title p{font-size:18px;color:#263c74;font-weight:900;margin-top:6px}
+.profile-layout{display:grid;grid-template-columns:360px 1fr;gap:40px;align-items:start}
+.profile-card{height:520px;background:white;border-radius:34px;overflow:hidden;box-shadow:0 12px 28px rgba(0,0,0,.08)}
+.profile-cover{height:160px;background:linear-gradient(135deg,#31437d,#1e294b);position:relative}
+.profile-big-avatar{position:absolute;left:40px;bottom:-58px;width:118px;height:118px;background:white;border-radius:28px;display:grid;place-items:center;color:#26365f;font-size:38px;font-weight:900;box-shadow:0 10px 20px rgba(0,0,0,.15);border:7px solid white;transform:rotate(2deg)}
+.profile-info{padding:90px 40px 40px}
+.profile-info h2{font-size:30px;font-weight:900;color:#1f2d4d;margin-bottom:12px}
+.year-badge{display:inline-block;padding:8px 16px;background:#eef3ff;color:#26365f;border:1px solid #cbd5e1;border-radius:999px;font-weight:900;margin-bottom:30px}
+.info-row{display:flex;align-items:center;gap:18px;margin-bottom:24px;color:#4e5c77;font-size:17px;font-weight:800}
+.info-row .iconbox{width:40px;height:40px;border-radius:50%;background:#f3f4f6;display:grid;place-items:center;color:#5b6475}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:38px}
+.stat-card{height:170px;background:white;border-radius:30px;padding:32px;box-shadow:0 12px 24px rgba(0,0,0,.08);position:relative;overflow:hidden}
+.stat-card svg{width:42px;height:42px;margin-bottom:20px}
+.stat-card small{display:block;color:#8b93a4;font-size:14px;font-weight:900;letter-spacing:.05em;margin-bottom:10px}
+.stat-card strong{font-size:34px;color:#1f2d4d;font-weight:900}
+.stat-card .red-text{color:#c63b2e;font-size:28px}
+.deadlines{background:white;border-radius:34px;padding:32px 40px;box-shadow:0 12px 24px rgba(0,0,0,.08);height:345px;overflow:auto}
+.deadlines h2{font-size:28px;color:#1f2d4d;margin-bottom:28px}
+.deadline-item{display:flex;align-items:center;gap:22px;background:#f1f3f5;border-radius:20px;padding:20px 22px;margin-bottom:20px}
+.datebox{width:62px;height:62px;border-radius:18px;display:grid;place-items:center;font-size:24px;font-weight:900}
+.d-red{background:#ffe2e0;color:#d73a33}.d-orange{background:#fff0d7;color:#f97316}.d-blue{background:#dfe7f5;color:#263c74}
+.deadline-text{flex:1}.deadline-text h3{font-size:20px;color:#1f2d4d}.deadline-text p{font-size:14px;color:#68758f;font-weight:700;margin-top:4px}
+.deadline-tag{padding:9px 16px;border-radius:999px;font-weight:900;background:#fee3e1;color:#d73a33}.deadline-tag.orange{background:#fff0d7;color:#f97316}.deadline-tag.blue{background:#dfe7f5;color:#263c74}
